@@ -32,12 +32,15 @@ function drawCard() {
 function displayCards(elementId, hand) {
     const handElement = document.getElementById(elementId);
     handElement.innerHTML = "";
+
     hand.forEach(card => {
         const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
         cardElement.textContent = card;
         handElement.appendChild(cardElement);
     });
 }
+
 
 function determineWinner() {
     const playerTotal = calculateTotal(playerHand);
