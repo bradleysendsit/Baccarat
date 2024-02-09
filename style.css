@@ -36,3 +36,11 @@ body {
 #bet-container {
     margin-top: 10px;
 }
+
+#hand-selection {
+    margin-bottom: 10px;
+}
+
+#hand-selection input {
+    margin-right: 10px;
+}
