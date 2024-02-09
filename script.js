@@ -3,17 +3,29 @@ let bankerHand = [];
 let balance = 1000;
 let betAmount = 0;
 
+// New variable to store the selected hand
+let selectedHand = '';
+
 function placeBet() {
     betAmount = parseInt(document.getElementById("betAmount").value);
-    if (betAmount > 0 && betAmount <= balance) {
+    const selectedRadio = document.querySelector('input[name="hand"]:checked');
+
+    if (betAmount > 0 && betAmount <= balance && selectedRadio) {
+        selectedHand = selectedRadio.value;
         balance -= betAmount;
         updateBalance();
     } else {
-        alert("Invalid bet amount");
+        alert("Invalid bet amount or hand not selected");
     }
 }
 
 function dealCards() {
+    // Check if the hand is selected
+    if (!selectedHand) {
+        alert("Please select a hand before dealing cards");
+        return;
+    }
+
     playerHand = drawCard();
     bankerHand = drawCard();
 
