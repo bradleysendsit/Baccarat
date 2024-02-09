@@ -54,6 +54,7 @@ function displayCards(elementId, hand) {
 }
 
 
+
 function determineWinner() {
     const playerTotal = calculateTotal(playerHand);
     const bankerTotal = calculateTotal(bankerHand);
