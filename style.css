@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#player-hand,
+#banker-hand {
+    width: 150px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#balance {
+    margin-top: 10px;
+}
+
+#bet-container {
+    margin-top: 10px;
+}
